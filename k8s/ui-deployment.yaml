@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: loksai-ui-deploy
+  labels:
+    app: loksai-ui-deploy-lbl
 spec:
   replicas: 1
   selector:
@@ -25,7 +27,7 @@ metadata:
 spec:
   type: NodePort
   selector:
-    app: ui
+    app: loksai-ui-deploy-lbl
   ports:
   - port: 8501
     targetPort: 8501
