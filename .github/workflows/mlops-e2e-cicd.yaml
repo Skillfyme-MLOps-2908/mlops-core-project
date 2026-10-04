@@ -5,9 +5,9 @@ on:
     branches:
       - master
 jobs:
-  # =============================
+  # ============================
   # JOB 1: Build & Push Images
-  # =============================
+  # ============================
   build:
     name: Build & Push to DockerHub
     runs-on: ubuntu-latest
